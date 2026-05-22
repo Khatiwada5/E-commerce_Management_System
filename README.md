@@ -27,3 +27,10 @@ Backend: PHP
 Frontend: HTML, CSS
 Database: MySQL
 Server: XAMPP / WAMP
+
+Railway deployment notes
+
+- The PHP app reads Railway MySQL variables automatically from `MYSQLHOST`, `MYSQLPORT`, `MYSQLUSER`, `MYSQLPASSWORD`, `MYSQLDATABASE`, or `MYSQL_URL`.
+- Railway start command is configured in `railway.json` as:
+  `php -S 0.0.0.0:$PORT -t public_html`
+- After adding a Railway MySQL service, import `database_schema.sql` into that database before opening the app.
